@@ -4,13 +4,13 @@ import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
 
 const About = ({ data }) => {
-    console.log(data);
+    const { title } = data.wpPage;
     return (
         <>
             <Header />
             <div className="pt-5" style={{ marginTop: "200px" }}>
 
-                <h1>{data.wpPage.title}</h1>
+                <h1>{title}</h1>
 
             </div>
             <Footer />
@@ -25,9 +25,9 @@ const About = ({ data }) => {
 
 export const query = graphql`
   {
-    page(id: "6778", idType: DATABASE_ID) {
-        title
-        content
+    wpPage(databaseId: {eq: 6778}) {
+      content
+      title
     }
   }
 `
