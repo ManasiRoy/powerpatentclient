@@ -1,0 +1,70 @@
+.logo{
+    display: inline-block;
+}
+.logo img{
+    margin-bottom: 0;
+    max-width: 150px;
+}
+body, p, h1,h2,h3,h4,h5,h6,a{
+   font-family: 'Source Sans Pro', sans-serif;
+}
+.banner h1{
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.threeSectionOutr{
+    background:#fbfbfb;
+}
+.threeSectionOutr figure{
+    min-height: 100px;
+}
+.footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding:0;
+    margin:0;
+}
+.footer ul li {float: none; display: block;}
+.footer ul li a{text-transform: none; font-weight: 600; padding: 0;margin: 0; display: inline-block; padding-bottom: 15px; color: #000; font-size: 18px; text-decoration: none;}
+.footer ul li ul{
+    padding-left: 15px;
+    display: block;
+}
+.footer ul li ul li{
+    margin-bottom: 5px;
+    position: relative;
+}
+.footer ul li ul li a{
+    padding-bottom: 0; font-size: 16px; font-weight: 400;
+}
+.footer ul li ul li:after{
+    content: '\2022';
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+.footer {
+    padding: 50px 0;
+}
+.footer .downarrow{display: none;}
+.email-outr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 50px;
+}
+.email-outr img{width: 30px; margin-bottom: 0;}
+.email-outr a{color: #000; font-size: 16px; text-decoration: none; display: inline-block; padding-left: 15px;}
+
+
+
+
+
+
+
+
+
+
