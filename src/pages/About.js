@@ -25,9 +25,9 @@ const About = ({ data }) => {
 
 export const query = graphql`
   {
-    wpPage(databaseId: {eq: 6778}) {
-      content
-      title
+    page(id: "6778", idType: DATABASE_ID) {
+        title
+        content
     }
   }
 `
