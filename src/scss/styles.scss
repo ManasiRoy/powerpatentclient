@@ -33,7 +33,7 @@ h1,h2,h3,h4,h5,h6, a{
 }
 p{
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 .mainSpacing{
     padding-top: 80px;
@@ -109,5 +109,13 @@ section{
             font-size: 16px;
         }
     }
-
+}
+.features-outr {
+    figure {
+        min-height: 160px;
+        img {
+            max-height: 150px;
+            max-width: 150px;
+        }
+    }
 }

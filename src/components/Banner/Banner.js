@@ -45,6 +45,74 @@ const getdata = graphql`
                 title
                 link
               }
+              f6para
+              f6text
+              f1para
+              f1text
+              f2para
+              f2text
+              f3para
+              f3text
+              f4para
+              f4text
+              f5para
+              f5text
+              featurespara
+              featurestext
+
+              
+              f6image {
+                altText
+                uri
+                title
+                sizes
+                slug
+                link
+              }
+              f5image {
+                altText
+                uri
+                title
+                sizes
+                slug
+                link
+              }
+              f4image {
+                altText
+                uri
+                title
+                sizes
+                slug
+                link
+              }
+              f3image {
+                altText
+                uri
+                title
+                sizes
+                slug
+                link
+              }
+              f2image {
+                altText
+                uri
+                title
+                sizes
+                slug
+                link
+              }
+              f1image {
+                altText
+                uri
+                title
+                sizes
+                slug
+                link
+              }
+              forlawyersbigtext
+              forlawyerstext
+              forlawyerssubheading
+              forlawyersvideo
             }
           }
         }
@@ -134,8 +202,71 @@ const Banner = () => {
         </div>
       </section>
 
+      <section className="mainSpacing features-outr">
+        <div className="container">
+          <div className="row mb-5">
+            <div className="col-md-12 text-center">
+              <h2>{common.featurestext}</h2>
+              <h3>{common.featurespara}</h3>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 text-center mb-4">
+              <figure><img src={common.f1image.link} alt={common.f1image.altText} /></figure>
+              <h4>{common.f1text}</h4>
+              <p>{common.f1para}</p>
+            </div>
+            <div className="col-md-4 text-center mb-4">
+              <figure><img src={common.f2image.link} alt={common.f1image.altText} /></figure>
+              <h4>{common.f2text}</h4>
+              <p>{common.f2para}</p>
+            </div>
+            <div className="col-md-4 text-center mb-4">
+              <figure><img src={common.f3image.link} alt={common.f1image.altText} /></figure>
+              <h4>{common.f3text}</h4>
+              <p>{common.f3para}</p>
+            </div>
+            <div className="col-md-4 text-center mb-4">
+              <figure><img src={common.f4image.link} alt={common.f1image.altText} /></figure>
+              <h4>{common.f4text}</h4>
+              <p>{common.f4para}</p>
+            </div>
+            <div className="col-md-4 text-center mb-4">
+              <figure><img src={common.f5image.link} alt={common.f1image.altText} /></figure>
+              <h4>{common.f5text}</h4>
+              <p>{common.f5para}</p>
+            </div>
+            <div className="col-md-4 text-center mb-4">
+              <figure><img src={common.f6image.link} alt={common.f1image.altText} /></figure>
+              <h4>{common.f6text}</h4>
+              <p>{common.f6para}</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <section className="mainSpacing">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 mb-5 text-center">
+              <h2>{common.forlawyerstext}</h2>
+              <h3>{common.forlawyerssubheading}</h3>
 
+            </div>
+            <div className="row">
+              <div className="col-md-6 align-self-center mb-4">
+                <p>{common.forlawyersbigtext}</p>
+              </div>
+              <div className="col-md-6 align-self-center mb-4">
+                <div className="ratio ratio-16x9">
+                  <video src={common.forlawyersvideo} controls allowfullscreen webkitallowfullscreen="true" className="embed-responsive-item"
+                    mozallowfullscreen="true" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
 
   )
