@@ -70,7 +70,8 @@ const Banner = () => {
             </div>
             <div className="col-md-6">
               <div className="ratio ratio-16x9">
-                <iframe className="embed-responsive-item" src={common.video} title={common.text1} controls allowfullscreen></iframe>
+                <video src={common.video} controls allowfullscreen webkitallowfullscreen="true" className="embed-responsive-item"
+                  mozallowfullscreen="true" />
               </div>
             </div>
           </div>
