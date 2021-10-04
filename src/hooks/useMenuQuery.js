@@ -16,6 +16,7 @@ export const useMenuQuery = () => {
             url
             parentId
             id
+            path
             childItems {
               nodes {
                 url

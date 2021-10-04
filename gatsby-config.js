@@ -44,7 +44,14 @@ module.exports = {
         url: `https://www.powerpatent.com/graphql`,
         protocol: `http`,
         useACF: true,
-        verboseOutput: true
+        verboseOutput: true,
+        includedRoutes: [
+          '**/*/*/products',
+          '**/*/*/partners',
+          '**/*/*/resources',
+          '**/*/*/about',
+          '**/*/*/blog',
+        ],
       },
     },
     {

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Wrapper } from './Navigation.styles'
 
-const Navigation = ({ menu }) => {
+const Navigation = ({ menu, url }) => {
 
     return (
         <Wrapper>
@@ -10,7 +10,7 @@ const Navigation = ({ menu }) => {
                 {menu.map(mainItem =>
                     !mainItem.parentId ? (
                         <li key={mainItem.id}>
-                            <Link to={mainItem.url} activeClassName="nav-active">
+                            <Link to={mainItem.path} activeClassName="nav-active">
                                 {mainItem.label}
                                 {mainItem.childItems.nodes.length !== 0 && <div className="downarrow"> &#8964; </div>}
                             </Link>
