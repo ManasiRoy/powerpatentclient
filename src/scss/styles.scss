@@ -1,24 +1,66 @@
-.logo{
-    display: inline-block;
+@import "./variables/var.scss";
+
+* {
+    margin: 0;
+    padding: 0;
 }
-.logo img{
-    margin-bottom: 0;
-    max-width: 150px;
+body {
+    font-size: 16px;
 }
-body, p, h1,h2,h3,h4,h5,h6,a{
-   font-family: 'Source Sans Pro', sans-serif;
+h1{
+    font-size: 50px;
 }
-.banner h1{
-    font-size: 2.7rem;
+h2{
+    font-size:40px;
+}
+h3{
+    font-size: 30px;
+}
+h4{
+    font-size: 25px;
+}
+h5{
+    font-size: 20px;
+}
+img{
+    max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6, a{
+    color: $primary-heading-color;
+    line-height: 1.2;
+    margin-bottom: 15px;
     font-weight: 600;
+}
+p{
+    font-size: 18px;
     line-height: 1.2;
 }
-.threeSectionOutr{
-    background:#fbfbfb;
+.mainSpacing{
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
-.threeSectionOutr figure{
-    min-height: 100px;
+section{
+    &:nth-child(even){
+        background: $odd-color;
+    }
 }
+.logo{
+    max-width: 150px;
+    display: inline-block;
+}
+.threesection{
+    figure{
+        width: 150px;
+        height: 150px;
+        margin:0 auto 25px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
 .footer ul {
     display: flex;
     justify-content: space-between;
@@ -58,13 +100,14 @@ body, p, h1,h2,h3,h4,h5,h6,a{
 }
 .email-outr img{width: 30px; margin-bottom: 0;}
 .email-outr a{color: #000; font-size: 16px; text-decoration: none; display: inline-block; padding-left: 15px;}
+.card{
+    height: 100%;
+    a{
+        text-decoration: none;
+        .screen-reader-text{
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
 
-
-
-
-
-
-
-
-
-
+}

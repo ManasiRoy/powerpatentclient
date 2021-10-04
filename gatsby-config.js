@@ -45,10 +45,24 @@ module.exports = {
       options: {
         url: `https://www.powerpatent.com/graphql`,
         protocol: `http`,
+        useACF: true,
+        verboseOutput: true
       },
     },
     {
       resolve: `gatsby-plugin-styled-components`,
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpgraphql",
+        // GraphQL endpoint, relative to your WordPress home URL.
+        url: "https://www.powerpatent.com/graphql",
+        // GraphQL endpoint using env variable
+        // url: "${process.env.WORDPRESS_URL}/graphql",
+      },
+    },
+    `gatsby-plugin-sass`
   ],
 }
