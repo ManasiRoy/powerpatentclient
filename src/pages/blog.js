@@ -23,7 +23,7 @@ const Blog = ({ data }) => {
                         {blogP.title}
                       </Link>
                     </h4>
-                    <p className="card-text" dangerouslySetInnerHTML={{ __html: blogP.excerpt }} />
+                    <div className="card-text" dangerouslySetInnerHTML={{ __html: blogP.excerpt }} />
                   </div>
                 </div>
               </div>
