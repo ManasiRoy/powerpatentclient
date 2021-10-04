@@ -4,7 +4,6 @@ import Layout from '../components/Layout/Layout';
 import SEO from "../components/seo";
 const Blog = ({ data }) => {
   const allBlog = data.allWpPost
-  console.log(allBlog);
 
   return (
     <Layout> <div className="mainSpacing">

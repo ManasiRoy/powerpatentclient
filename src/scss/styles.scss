@@ -119,3 +119,21 @@ section{
         }
     }
 }
+.navbar-nav{
+    position: relative;
+    li{
+        ul{
+            position: absolute;
+            left: 0;
+            top: 100%;
+            z-index: 9;
+            padding: 10px;
+            display: none;
+        }
+        &:hover{
+            ul{
+                display: block;
+            }
+        }
+    }
+}

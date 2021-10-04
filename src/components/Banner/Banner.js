@@ -4,118 +4,118 @@ import Img from "gatsby-image"
 
 const getdata = graphql`
     {
-        wpgraphql {
-          page(id: "cG9zdDo2OTQy") {
-            uri
-            title
-            slug
-            homeFields {
-              text1
-              video
-              para1
-              trustedtext
-              trustedimages {
-                altText
-                link
-                uri
-                title
-                databaseId
-              }
-              lawyerstext
-              lawyerspara
-              founderstext
-              founderspara
-              companytext
-              companypara
-              lawyersimage {
-                uri
-                title
-                altText
-                link
-              }
-              foundersimage {
-                altText
-                uri
-                title
-                link
-              }
-              companyimage {
-                altText
-                uri
-                title
-                link
-              }
-              f6para
-              f6text
-              f1para
-              f1text
-              f2para
-              f2text
-              f3para
-              f3text
-              f4para
-              f4text
-              f5para
-              f5text
-              featurespara
-              featurestext
-
-              
-              f6image {
-                altText
-                uri
-                title
-                sizes
-                slug
-                link
-              }
-              f5image {
-                altText
-                uri
-                title
-                sizes
-                slug
-                link
-              }
-              f4image {
-                altText
-                uri
-                title
-                sizes
-                slug
-                link
-              }
-              f3image {
-                altText
-                uri
-                title
-                sizes
-                slug
-                link
-              }
-              f2image {
-                altText
-                uri
-                title
-                sizes
-                slug
-                link
-              }
-              f1image {
-                altText
-                uri
-                title
-                sizes
-                slug
-                link
-              }
-              forlawyersbigtext
-              forlawyerstext
-              forlawyerssubheading
-              forlawyersvideo
+      wpgraphql {
+        page(id: "cG9zdDo2OTQy") {
+          uri
+          title
+          slug
+          homeFields {
+            text1
+            video
+            para1
+            trustedtext
+            trustedimages {
+              altText
+              link
+              uri
+              title
+              databaseId
             }
+            lawyerstext
+            lawyerspara
+            founderstext
+            founderspara
+            companytext
+            companypara
+            lawyersimage {
+              uri
+              title
+              altText
+              link
+            }
+            foundersimage {
+              altText
+              uri
+              title
+              link
+            }
+            companyimage {
+              altText
+              uri
+              title
+              link
+            }
+            f6para
+            f6text
+            f1para
+            f1text
+            f2para
+            f2text
+            f3para
+            f3text
+            f4para
+            f4text
+            f5para
+            f5text
+            featurespara
+            featurestext
+
+            
+            f6image {
+              altText
+              uri
+              title
+              sizes
+              slug
+              link
+            }
+            f5image {
+              altText
+              uri
+              title
+              sizes
+              slug
+              link
+            }
+            f4image {
+              altText
+              uri
+              title
+              sizes
+              slug
+              link
+            }
+            f3image {
+              altText
+              uri
+              title
+              sizes
+              slug
+              link
+            }
+            f2image {
+              altText
+              uri
+              title
+              sizes
+              slug
+              link
+            }
+            f1image {
+              altText
+              uri
+              title
+              sizes
+              slug
+              link
+            }
+            forlawyersbigtext
+            forlawyerstext
+            forlawyerssubheading
+            forlawyersvideo
           }
         }
+      }
     }
   `
 

@@ -51,6 +51,7 @@ export const Wrapper = styled.nav`
           box-shadow: rgba(0,0,0,0.2) 0 5px 5px 0;
           top: 100%;
           left:0;
+          z-index:999;
           li{
             border-bottom:1px solid rgba(0,0,0,0.1);
             padding-bottom:10px;
