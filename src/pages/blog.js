@@ -2,6 +2,9 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from '../components/Layout/Layout';
 import SEO from "../components/seo";
+import BlogImage from "../images/blog.jpg";
+
+
 const Blog = ({ data }) => {
   const allBlog = data.allWpPost
 
@@ -9,6 +12,9 @@ const Blog = ({ data }) => {
     <Layout>
 
       <SEO title="Blog" />
+      <figure className="banner-main">
+        <img src={BlogImage} alt="blog" />
+      </figure>
       <div className="mainSpacing">
         <div className="container">
           <div className="row">

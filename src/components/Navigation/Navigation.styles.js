@@ -6,7 +6,7 @@ export const Wrapper = styled.nav`
   font-size: 1rem;
   
   .nav-active {
-    color: #ee2562;
+    color: #2196f3;
   }
 
   @media (min-width: 992px) {
