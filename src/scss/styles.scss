@@ -88,6 +88,7 @@ section{
 }
 .footer {
     padding: 50px 0;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
 }
 .footer .downarrow{display: none;}
 .email-outr{
@@ -134,6 +135,30 @@ section{
             ul{
                 display: block;
             }
+        }
+    }
+}
+.banner-main{
+    width: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.logoArea{
+    .react-multi-carousel-list{
+        .react-multi-carousel-track{
+            align-items: center;
+            figure{
+                margin-bottom: 0;
+            }
+        }
+        .react-multiple-carousel__arrow--right {
+            right: 0;
+        }
+        .react-multiple-carousel__arrow--left {
+            left: 0;
         }
     }
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const getdata = graphql`
     {
@@ -59,8 +60,6 @@ const getdata = graphql`
             f5text
             featurespara
             featurestext
-
-            
             f6image {
               altText
               uri
@@ -113,6 +112,10 @@ const getdata = graphql`
             forlawyerstext
             forlawyerssubheading
             forlawyersvideo
+            forcompaniesparagraph
+            forcompaniessubheading
+            forcompaniestext
+            forcompaniesvideo
           }
         }
       }
@@ -123,7 +126,25 @@ const Banner = () => {
   const data = useStaticQuery(getdata);
   const common = data.wpgraphql.page.homeFields;
   const imageData = common.trustedimages;
-
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 6
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   console.log(data)
   return (
 
@@ -158,9 +179,17 @@ const Banner = () => {
 
             <div className="logoArea">
               <div className="justify-content-center align-items-center row">
-                {imageData.map(image => {
-                  return (<figure className="px-3 col-md-2 text-center align-self-center" key={image.title}> <img src={image.link} alt="client" /> </figure>)
-                })}
+                <div className="row">
+                  <Carousel responsive={responsive}>
+                    {imageData.map(image => {
+                      return (
+                        <figure className="px-3 text-center align-self-center" key={image.title}>
+                          <img src={image.link} alt="client" />
+                        </figure>
+                      )
+                    })}
+                  </Carousel>
+                </div>
               </div>
             </div>
           </div>
@@ -259,7 +288,7 @@ const Banner = () => {
               </div>
               <div className="col-md-6 align-self-center mb-4">
                 <div className="ratio ratio-16x9">
-                  <video src={common.forlawyersvideo} controls allowfullscreen webkitallowfullscreen="true" className="embed-responsive-item"
+                  <video src={common.forlawyersvideo} controls allowFullScreen webkitallowfullscreen="true" className="embed-responsive-item"
                     mozallowfullscreen="true" />
                 </div>
               </div>
@@ -267,8 +296,28 @@ const Banner = () => {
           </div>
         </div>
       </section>
+      <section className="mainSpacing">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 mb-5 text-center">
+              <h2>{common.forcompaniestext}</h2>
+              <h3>{common.forcompaniessubheading}</h3>
+            </div>
+            <div className="row">
+              <div className="col-md-6 align-self-center mb-4">
+                <div className="ratio ratio-16x9">
+                  <video src={common.forcompaniesvideo} controls allowFullScreen webkitallowfullscreen="true" className="embed-responsive-item"
+                    mozallowfullscreen="true" />
+                </div>
+              </div>
+              <div className="col-md-6 align-self-center mb-4">
+                <p>{common.forcompaniesparagraph}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
-
   )
 }
 
