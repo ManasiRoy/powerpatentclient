@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Button from 'react-bootstrap/Button'
 
 const getdata = graphql`
     {
@@ -296,6 +297,7 @@ const Banner = () => {
           </div>
         </div>
       </section>
+
       <section className="mainSpacing">
         <div className="container">
           <div className="row">
@@ -312,6 +314,25 @@ const Banner = () => {
               </div>
               <div className="col-md-6 align-self-center mb-4">
                 <p>{common.forcompaniesparagraph}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mainSpacing">
+        <div className="container">
+          <div className="row">
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <article>
+                  <h3>JOIN POWERPATENT</h3>
+                  <p>Get in touch to discuss plans and pricing</p>
+                </article>
+                <div className="d-flex flex-wrap justify-content-center">
+                  <Button variant="primary" className="m-2">Request a Demo</Button>
+                  <Button variant="primary" className="m-2">Take a video tour</Button>
+                </div>
               </div>
             </div>
           </div>

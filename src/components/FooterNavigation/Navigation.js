@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const Navigation = ({ menu }) => {
+const Navigation = ({ menu, url }) => {
+
     return (
-        <section>
+        <footer>
             <ul>
                 {menu.map(mainItem =>
                     !mainItem.parentId ? (
                         <li key={mainItem.id}>
-                            <Link to={mainItem.url} activeClassName="nav-active">
+                            <Link to={mainItem.path} activeClassName="nav-active">
                                 {mainItem.label}
                                 {mainItem.childItems.nodes.length !== 0 && <div className="downarrow"> &#8964; </div>}
                             </Link>
@@ -16,7 +17,7 @@ const Navigation = ({ menu }) => {
                                 <ul>
                                     {mainItem.childItems.nodes.map(childItem => (
                                         <li key={childItem.id}>
-                                            <Link to={childItem.url} activeClassName="nav-active">
+                                            <Link to={childItem.path} activeClassName="nav-active">
                                                 {childItem.label}
                                             </Link>
                                         </li>
@@ -28,7 +29,7 @@ const Navigation = ({ menu }) => {
                     ) : null
                 )}
             </ul>
-        </section>
+        </footer>
     )
 }
 

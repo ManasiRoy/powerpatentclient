@@ -35,7 +35,6 @@ const Blog = ({ data }) => {
                 </div>
               ))
             }
-
           </div>
         </div>
       </div>
