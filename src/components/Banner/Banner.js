@@ -131,7 +131,7 @@ const Banner = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 6
+      items: 5
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -156,6 +156,7 @@ const Banner = () => {
             <div className="col-md-6 align-self-center">
               <article>
                 <h1>{common.text1}</h1>
+                <h2>IP. Simplified.</h2>
                 <p>{common.para1}</p>
               </article>
             </div>
@@ -201,7 +202,7 @@ const Banner = () => {
         <div className="container">
           <div className="row threesection">
             <div className="col-md-4 text-center mb-md-0 mb-4">
-              <article>
+              <article className="border p-3 h-100">
                 <figure>
                   <img src={common.foundersimage.link} />
                 </figure>
@@ -210,7 +211,7 @@ const Banner = () => {
               </article>
             </div>
             <div className="col-md-4 text-center mb-md-0 mb-4">
-              <article>
+              <article className="border p-3 h-100">
                 <figure>
                   <img src={common.lawyersimage.link} />
                 </figure>
@@ -219,8 +220,8 @@ const Banner = () => {
               </article>
             </div>
 
-            <div className="col-md-4 text-center mb-md-0 mb-4">
-              <article>
+            <div className="col-md-4 text-center mb-md-0 mb-4 ">
+              <article className="border p-3 h-100">
                 <figure>
                   <img src={common.companyimage.link} />
                 </figure>
@@ -275,7 +276,7 @@ const Banner = () => {
         </div>
       </section>
 
-      <section className="mainSpacing">
+      {/* <section className="mainSpacing">
         <div className="container">
           <div className="row">
             <div className="col-md-12 mb-5 text-center">
@@ -296,9 +297,9 @@ const Banner = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="mainSpacing">
+      {/* <section className="mainSpacing">
         <div className="container">
           <div className="row">
             <div className="col-md-12 mb-5 text-center">
@@ -318,7 +319,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="mainSpacing">
         <div className="container">
