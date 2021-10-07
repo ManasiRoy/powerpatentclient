@@ -109,14 +109,7 @@ const getdata = graphql`
               slug
               link
             }
-            forlawyersbigtext
-            forlawyerstext
-            forlawyerssubheading
-            forlawyersvideo
-            forcompaniesparagraph
-            forcompaniessubheading
-            forcompaniestext
-            forcompaniesvideo
+            
           }
         }
       }
@@ -276,28 +269,7 @@ const Banner = () => {
         </div>
       </section>
 
-      {/* <section className="mainSpacing">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 mb-5 text-center">
-              <h2>{common.forlawyerstext}</h2>
-              <h3>{common.forlawyerssubheading}</h3>
 
-            </div>
-            <div className="row">
-              <div className="col-md-6 align-self-center mb-4">
-                <p>{common.forlawyersbigtext}</p>
-              </div>
-              <div className="col-md-6 align-self-center mb-4">
-                <div className="ratio ratio-16x9">
-                  <video src={common.forlawyersvideo} controls allowFullScreen webkitallowfullscreen="true" className="embed-responsive-item"
-                    mozallowfullscreen="true" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* <section className="mainSpacing">
         <div className="container">

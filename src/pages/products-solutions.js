@@ -11,9 +11,6 @@ const Product = ({ data }) => {
         <Layout>
             <SEO title="Product" />
             <section className="mainSection">
-                <figure className="banner-main">
-                    <img src={common.categoryimage.link} alt={common.title} />
-                </figure>
                 <div className="mainSpacing">
                     <div className="container">
                         <div className="row">

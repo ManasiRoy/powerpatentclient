@@ -3,40 +3,95 @@ import { graphql, Link } from "gatsby"
 import Layout from '../components/Layout/Layout';
 import SEO from "../components/seo";
 import BlogImage from "../images/blog.jpg";
-import IMG from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
-const Blog = ({ data }) => {
-  const allBlog = data.allWpPost
-
-
+const Blog = (props) => {
+  const { data: { allWpPost } } = props
+  const isLatestPost = allWpPost.nodes.map(d => d.date);
+  console.log(allWpPost)
   return (
     <Layout>
       <SEO title="Blog" />
       <figure className="banner-main">
         <img src={BlogImage} alt="blog" />
       </figure>
-      <div className="mainSpacing">
+      <div className="mainSpacing blogOutr">
         <div className="container">
-          <div className="row">
-
-            {
-              allBlog.nodes.map((blogP, index) => (
-                <div className="col-md-4 mb-4" key={index}>
+          <div className="row mb-5">
+            <div className="col-md-6">
+              <div>{isLatestPost ?
+                <div>
+                  <h2>Featured</h2>
                   <div className="card">
+                    <GatsbyImage
+                      className="card-img-top"
+                      image={
+                        allWpPost.nodes[0].featuredImage.node.localFile.childImageSharp
+                          .gatsbyImageData
+                      }
+                    />
                     <div className="card-body">
-                      <figure>
-                        {/* <IMG src={data.allWpPost.nodes?.featuredImage.node?.localFile.childImageSharp?.gatsbyImageData} /> */}
-                      </figure>
-                      <h4 className="card-title mb-4">
-                        <Link to={blogP.slug}>
-                          {blogP.title}
+                      <h4 className="card-title mb-3">
+                        <Link to={allWpPost.nodes[0].slug}>
+                          {allWpPost.nodes[0].title}
                         </Link>
                       </h4>
+                      <div className="card-text" dangerouslySetInnerHTML={{ __html: allWpPost.nodes[0].excerpt }} />
                     </div>
                   </div>
                 </div>
-              ))
-            }
+                : ''}</div>
+            </div>
+            <div className="col-md-6">
+              {
+                allWpPost.nodes.map((node, index) => {
+                  return (
+                    <div className="col-md-12 mb-4" key={index}>
+                      <div className="card">
+                        <div className="row">
+                          <div class="col-md-4 align-self-center">
+                            <GatsbyImage
+                              image={
+                                node.featuredImage.node.localFile.childImageSharp
+                                  .gatsbyImageData
+                              }
+                            />
+                          </div>
+                          <div class="col-md-8 align-self-center">
+                            <div className="card-body p-0">
+                              <h4 className="card-title">
+                                <Link to={node.slug}>
+                                  {node.title}
+                                </Link>
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4">
+              <h3>Explore by topic</h3>
+              <ul className="list-group list-group-flush">
+                {
+                  allWpPost.nodes.map((catG, catGindex) => {
+                    return (
+                      <li className="list-group-item" key={catGindex}>
+                        <Link to={catG.slug}>{catG.categories.nodes.map(n => n.name)}</Link>
+                      </li>
+                    )
+                  })
+                }
+
+
+              </ul>
+            </div>
+            <div className="col-md-8"></div>
           </div>
         </div>
       </div>
@@ -53,9 +108,14 @@ export const query = graphql`
         uri
         title
         slug
-        featuredImage {
+        date(fromNow: true)
+        categories {
+          nodes {
+            name
+          }
+      }
+      featuredImage {
           node {
-            id
             localFile {
               childImageSharp {
                 gatsbyImageData(width: 1920, layout: CONSTRAINED, placeholder: TRACED_SVG)
