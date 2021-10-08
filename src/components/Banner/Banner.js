@@ -155,7 +155,7 @@ const Banner = () => {
             </div>
             <div className="col-md-6">
               <div className="ratio ratio-16x9">
-                <video src={common.video} controls allowfullscreen webkitallowfullscreen="true" className="embed-responsive-item"
+                <video src={common.video} controls allowFullScreen webkitallowfullscreen="true" className="embed-responsive-item"
                   mozallowfullscreen="true" />
               </div>
             </div>

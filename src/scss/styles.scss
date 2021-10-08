@@ -31,6 +31,9 @@ h1,h2,h3,h4,h5,h6, a{
     margin-bottom: 15px;
     font-weight: 600;
 }
+a{
+    margin-bottom: auto;
+}
 button.btn.btn-primary{
     background: $primary-heading-color;
 }
@@ -133,22 +136,25 @@ section{
     }
 }
 .navbar-nav{
-    position: relative;
     li{
+        position: relative;
         ul{
-            position: absolute;
-            left: 0;
-            top: 100%;
-            z-index: 9;
-            padding: 10px;
-            display: none;
-        }
-        &:hover{
-            ul{
-                display: block;
+            .dropdown-item{
+                background: transparent;
             }
         }
+
+        &:last-child{
+            ul{
+                left: auto;
+                right: 0;
+            }
+        }
+        
     }
+}
+.navbar-light .navbar-nav .nav-link.nav-active{
+    color: $primary-heading-color;
 }
 .banner-main{
     width: 100%;
@@ -198,3 +204,10 @@ section{
         }
     }
 }
+.dropdown-item{
+    padding: 0;
+}
+.navbar-nav{
+    align-items: center;
+}
+@import "./variables/responsive.scss";
