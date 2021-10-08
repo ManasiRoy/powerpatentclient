@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <div className="mb-2">
-                            <Link to="/">
+                            <Link to="/" className="logo">
                                 <img src={Logo} alt={site.siteMetadata.title} />
                             </Link>
                         </div>
