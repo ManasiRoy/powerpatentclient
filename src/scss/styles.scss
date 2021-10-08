@@ -210,4 +210,15 @@ section{
 .navbar-nav{
     align-items: center;
 }
+.list-group-flash{
+    .list-group-item{
+        a{
+            text-decoration: none;
+            color: $primary-text-color;
+            &:hover{
+                color: $primary-heading-color;
+            }
+        }
+    }
+}
 @import "./variables/responsive.scss";

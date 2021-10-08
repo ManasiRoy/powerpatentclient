@@ -29,6 +29,7 @@ const Blog = (props) => {
                         allWpPost.nodes[0].featuredImage.node.localFile.childImageSharp
                           .gatsbyImageData
                       }
+                      alt="blog"
                     />
                     <div className="card-body">
                       <h4 className="card-title mb-3">
@@ -42,22 +43,23 @@ const Blog = (props) => {
                 </div>
                 : ''}</div>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 mt-5 pt-3">
               {
-                allWpPost.nodes.map((node, index) => {
+                allWpPost.nodes.slice(0, 5).map((node, index) => {
                   return (
                     <div className="col-md-12 mb-4" key={index}>
                       <div className="card">
                         <div className="row">
-                          <div class="col-md-4 align-self-center">
+                          <div className="col-md-4 align-self-center">
                             <GatsbyImage
                               image={
                                 node.featuredImage.node.localFile.childImageSharp
                                   .gatsbyImageData
                               }
+                              alt="blog"
                             />
                           </div>
-                          <div class="col-md-8 align-self-center">
+                          <div className="col-md-8 align-self-center">
                             <div className="card-body p-0">
                               <h4 className="card-title">
                                 <Link to={node.slug}>
@@ -77,7 +79,7 @@ const Blog = (props) => {
           <div className="row">
             <div className="col-md-4">
               <h3>Explore by topic</h3>
-              <ul className="list-group list-group-flush">
+              <ul className="list-group list-group-flash">
                 {
                   allWpPost.nodes.map((catG, catGindex) => {
                     return (
@@ -87,8 +89,6 @@ const Blog = (props) => {
                     )
                   })
                 }
-
-
               </ul>
             </div>
             <div className="col-md-8"></div>

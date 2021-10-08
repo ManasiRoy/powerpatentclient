@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Wrapper } from './Navigation.styles'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
@@ -17,7 +16,7 @@ const Navigation = ({ menu, url }) => {
                                 {mainItem.childItems.nodes.length > 0 ? (
                                     <NavDropdown title={mainItem.label}>
                                         {mainItem.childItems.nodes.map(childItem => (
-                                            <NavDropdown.Item key={childItem.id} className="dropdown-item" >
+                                            <NavDropdown.Item className="dropdown-item" key={childItem.id}>
                                                 <Link to={childItem.path} className="nav-link" activeClassName="nav-active">
                                                     {childItem.label}
                                                 </Link>
@@ -25,7 +24,6 @@ const Navigation = ({ menu, url }) => {
                                         ))}
                                     </NavDropdown>
                                 ) : null
-
                                 }
                             </Link>
                         </li>

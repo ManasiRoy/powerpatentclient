@@ -45,7 +45,7 @@ const Companies = () => {
                                 </div>
                                 <div className="col-md-6 align-self-center mb-4">
                                     <figure>
-                                        <img src={common.forlawyersvideo.link} className="w-100" />
+                                        <img src={common.forlawyersvideo.link} className="w-100" alt="company" />
                                     </figure>
                                 </div>
                             </div>
