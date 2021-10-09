@@ -25,14 +25,23 @@ const Accelerator = ({ data }) => {
                         </div>
                         <div className="row mb-5 text-center innerpages">
                             <div className="col-md-4 mb-3 mb-md-0">
+                                <figure>
+                                    <img src={data.wpgraphql.page.law.icon1.link} alt={data.wpgraphql.page.law.icon1.title} />
+                                </figure>
                                 <h4>{common.firsttext}</h4>
                                 <p>{common.firstpara}</p>
                             </div>
                             <div className="col-md-4 mb-3 mb-md-0">
+                                <figure>
+                                    <img src={data.wpgraphql.page.law.icon2.link} alt={data.wpgraphql.page.law.icon2.title} />
+                                </figure>
                                 <h4>{common.secondtext}</h4>
                                 <p>{common.secondpara}</p>
                             </div>
                             <div className="col-md-4 mb-3 mb-md-0">
+                                <figure>
+                                    <img src={data.wpgraphql.page.law.icon3.link} alt={data.wpgraphql.page.law.icon3.title} />
+                                </figure>
                                 <h4>{common.thirdtext}</h4>
                                 <p>{common.thirdpara}</p>
                             </div>
@@ -79,6 +88,23 @@ export const query = graphql`
             accelerator {
                 secondheading
                 secondpara
+            }
+            law {
+                icon1 {
+                    link
+                    uri
+                    title
+                }
+                icon2 {
+                    link
+                    uri
+                    title
+                }
+                    icon3 {
+                    link
+                    uri
+                    title
+                }
             }
         }
     }

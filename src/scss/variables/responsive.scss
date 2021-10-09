@@ -49,20 +49,24 @@
     }
     
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 @media only screen and (max-width: 767px) {
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size:25px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 16px;
+    }
+
     .mainSpacing {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -78,6 +82,13 @@
     }
     .card-title {
         padding: 15px;
+    }
+    .footer .logo {
+        max-width: 120px;
+        margin-bottom: 15px;
+    }
+    span.navbar-brand .logo {
+        max-width: 100px;
     }
 }
 @media only screen and (max-width: 567px) {
