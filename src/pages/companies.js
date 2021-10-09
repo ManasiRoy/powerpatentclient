@@ -20,6 +20,12 @@ const getdata = graphql`
           id
           link
         }
+        bannerimage {
+          altText
+          uri
+          link
+          title
+        }
       }
     }
   }
@@ -32,6 +38,11 @@ const Companies = () => {
         <>
             <Layout>
                 <SEO title="Law-Firm" />
+                <section className="mainSection">
+                    <figure>
+                        <img src={common.bannerimage.link} alt="banner" />
+                    </figure>
+                </section>
                 <section className="mainSpacing">
                     <div className="container">
                         <div className="row">
