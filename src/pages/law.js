@@ -25,14 +25,23 @@ const Law = ({ data }) => {
               </div>
               <div className="row mb-5 text-center innerpages">
                 <div className="col-md-4 mb-3 mb-md-0">
+                  <figure>
+                    <img src={data.wpgraphql.page.law.icon1.link} alt={data.wpgraphql.page.law.icon1.title} />
+                  </figure>
                   <h4>{common.firsttext}</h4>
                   <p>{common.firstpara}</p>
                 </div>
                 <div className="col-md-4 mb-3 mb-md-0">
+                  <figure>
+                    <img src={data.wpgraphql.page.law.icon2.link} alt={data.wpgraphql.page.law.icon2.title} />
+                  </figure>
                   <h4>{common.secondtext}</h4>
                   <p>{common.secondpara}</p>
                 </div>
                 <div className="col-md-4 mb-3 mb-md-0">
+                  <figure>
+                    <img src={data.wpgraphql.page.law.icon3.link} alt={data.wpgraphql.page.law.icon3.title} />
+                  </figure>
                   <h4>{common.thirdtext}</h4>
                   <p>{common.thirdpara}</p>
                 </div>
@@ -58,7 +67,7 @@ const Law = ({ data }) => {
 
 export const query = graphql`
   {
-    wpgraphql {
+      wpgraphql {
       page(id: "cG9zdDo3MDgz") {
         partnersinnerpages {
           headingmain
@@ -84,7 +93,24 @@ export const query = graphql`
             uri
             title
             srcSet
-            }
+          }
+        }
+        law {
+          icon1 {
+            altText
+            uri
+            link
+          }
+          icon2 {
+            altText
+            uri
+            link
+          }
+          icon3 {
+            altText
+            uri
+            link
+          }
         }
       }
     }
