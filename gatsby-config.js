@@ -68,6 +68,6 @@ module.exports = {
         // url: "${process.env.WORDPRESS_URL}/graphql",
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
   ],
 }

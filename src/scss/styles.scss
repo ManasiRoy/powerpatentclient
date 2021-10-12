@@ -221,4 +221,18 @@ section{
         }
     }
 }
+.page-link {
+    height: 100%;
+    color: $primary-text-color;
+}
+.blogOutr .gatsby-image-wrapper-constrained {
+    display: inline-block;
+    vertical-align: top;
+    height: 200px;
+}
+.word-wrap{
+    .card-text{
+        word-wrap: break-word;
+    }
+}
 @import "./variables/responsive.scss";

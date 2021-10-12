@@ -6,14 +6,22 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 export default function Post({ data }) {
   const allBlog = data.wpPost
-
+  console.log('data >> ', allBlog)
   return (
     <Layout>
       <SEO title="Blog" />
       <div className="mainSpacing">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12 word-wrap">
+              <GatsbyImage
+                className="card-img-top mb-5"
+                image={
+                  allBlog.featuredImage.node.localFile.childImageSharp
+                    .gatsbyImageData
+                }
+                alt="blog"
+              />
               <article className="mb-5 text-center">
                 <h4 className="card-title mb-2">
                   {allBlog.title}
@@ -37,5 +45,12 @@ export const query = graphql`
       id
       uri
       title
+      featuredImage {
+        node {
+          localFile {
+            childImageSharp {
+                      gatsbyImageData
+            }}}
+          }
     }
   }`
