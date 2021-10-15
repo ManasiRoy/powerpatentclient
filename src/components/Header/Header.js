@@ -19,9 +19,8 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-
                     <Navigation menu={menu.menuItems.nodes} />
-
+                    <Link to="https://www.corpnet.com/?PID=1411&PID=1411/" target="_blank" className="btn btn-primary m-2"> Referral</Link>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

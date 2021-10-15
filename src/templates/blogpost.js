@@ -10,7 +10,7 @@ export default function Post({ data }) {
   return (
     <Layout>
       <SEO title="Blog" />
-      <div className="mainSpacing">
+      <section className="mainSpacing">
         <div className="container">
           <div className="row">
             <div className="col-md-12 word-wrap">
@@ -32,7 +32,7 @@ export default function Post({ data }) {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }

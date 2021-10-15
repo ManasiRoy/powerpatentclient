@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button'
 
 const Accelerator = ({ data }) => {
     const common = data.wpgraphql.page.partnersinnerpages
-    const commonNext = data.wpgraphql.page.accelerator
     return (
         <Layout>
             <SEO title="Accelerator" />

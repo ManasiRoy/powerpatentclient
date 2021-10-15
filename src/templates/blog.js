@@ -14,13 +14,9 @@ const NavLink = props => {
 }
 
 const BlogPage = (props) => {
-  /*const { data: { allWpPost } } = props
-  const isLatestPost = allWpPost.nodes.map(d => d.date);
-  console.log(allWpPost)*/
   const { group, index, first, last, pageCount } = props.pageContext;
   const previousUrl = pageCount - index == 1 ? '/blog/' : `/blog/${(index - 1).toString()}`
   const nextUrl = `/blog/${(index + 1).toString()}`
-  //const group = data.allWpPost
   console.log('collection >> ', props.pageContext)
   return (
     <Layout>
@@ -80,13 +76,8 @@ const BlogPage = (props) => {
               <div className="row">
                 {
                   group.map((node, index) => (
-                    // allWpPost.nodes.slice(0, 5).map((node, index) => {
-                    //   return (
-
                     <div className="col-md-3 mb-4" key={index}>
                       <div className="card">
-
-
                         <GatsbyImage
                           image={
                             node.featuredImage.node.localFile.childImageSharp
@@ -94,8 +85,6 @@ const BlogPage = (props) => {
                           }
                           alt="blog"
                         />
-
-
                         <div className="card-body">
                           <h4 className="card-title">
                             <Link to={"/blog/" + node.slug}>
@@ -103,19 +92,16 @@ const BlogPage = (props) => {
                             </Link>
                           </h4>
                         </div>
-
-
                       </div>
                     </div>
-
                   ))}
               </div>
               <div className="pagination justify-content-center">
                 <div className="previousLink d-inline p-2 page-item">
-                  <NavLink test={first} url={previousUrl} text="&laquo;" className="page-link" />
+                  <NavLink test={first} url={previousUrl} text="&laquo; Prev" className="page-link" />
                 </div>
                 <div className="nextLink d-inline p-2 page-item">
-                  <NavLink test={last} url={nextUrl} text="&raquo;" className="page-link" />
+                  <NavLink test={last} url={nextUrl} text="&raquo; Next" className="page-link" />
                 </div>
               </div>
             </div>
@@ -156,4 +142,3 @@ export const query = graphql`
 `
 
 export default BlogPage;
-

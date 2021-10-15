@@ -3,7 +3,6 @@ const Post = path.resolve("./src/templates/blogpost.js")
 const createPaginatedPages = require('gatsby-paginate')
 
 exports.createPages = ({ graphql, actions: { createPage } }) => {
-  /*new Promise((resolve, reject) => {*/
   return graphql(`
   {
     allWpPost {
@@ -52,7 +51,5 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
       pathPrefix: 'blog', // This is optional and defaults to an empty string if not used
       context: {}, // This is optional and defaults to an empty object if not used
     })
-    /* resolve()
-   })*/
   })
 }

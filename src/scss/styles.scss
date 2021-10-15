@@ -235,4 +235,9 @@ section{
         word-wrap: break-word;
     }
 }
+.navbar-nav{
+    .dropdown-menu{
+        padding: 0;
+    }
+}
 @import "./variables/responsive.scss";
