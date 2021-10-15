@@ -27,7 +27,7 @@ const BlogPage = (props) => {
       <section className="mainSpacing blogOutrFeatured">
         <div className="container">
           <div className="row mb-5">
-            <div className="col-md-4">
+            {/* <div className="col-md-4">
               <h3>Explore by topic</h3>
               <ul className="list-group list-group-flash">
                 {
@@ -40,8 +40,8 @@ const BlogPage = (props) => {
                   })
                 }
               </ul>
-            </div>
-            <div className="col-md-8">
+            </div> */}
+            <div className="col-md-6">
               {/* <div>{last ? */}
               <div>
                 <h2>Featured</h2>
@@ -65,19 +65,15 @@ const BlogPage = (props) => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="mainSpacing blogOutr">
-        <div className="container">
-          <div className="row">
-            <div className="text-center"><h2>Latest Blog Post</h2></div>
-            <div className="col-md-12 mt-5 pt-3">
-              <div className="row">
-                {
-                  group.map((node, index) => (
-                    <div className="col-md-3 mb-4" key={index}>
-                      <div className="card">
+            <div className="col-md-6">
+              <div>
+                <h2>Latest Blog Post</h2>
+              </div>
+              {
+                group.map((node, index) => (
+                  <div className="card mb-2" key={index}>
+                    <div className="row g-0">
+                      <div className="col-md-4">
                         <GatsbyImage
                           image={
                             node.featuredImage.node.localFile.childImageSharp
@@ -85,18 +81,21 @@ const BlogPage = (props) => {
                           }
                           alt="blog"
                         />
+                      </div>
+                      <div className="col-md-8">
                         <div className="card-body">
-                          <h4 className="card-title">
+                          <h6 className="card-title">
                             <Link to={"/blog/" + node.slug}>
                               {node.title}
                             </Link>
-                          </h4>
+                          </h6>
                         </div>
                       </div>
                     </div>
-                  ))}
-              </div>
-              <div className="pagination justify-content-center">
+                  </div>
+
+                ))}
+              <div className="pagination justify-content-end">
                 <div className="previousLink d-inline p-2 page-item">
                   <NavLink test={first} url={previousUrl} text="&laquo; Prev" className="page-link" />
                 </div>
@@ -108,6 +107,7 @@ const BlogPage = (props) => {
           </div>
         </div>
       </section>
+
     </Layout>
   )
 }

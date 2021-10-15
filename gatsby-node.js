@@ -47,7 +47,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
       edges: result.data.allWpPost.nodes,
       createPage: createPage,
       pageTemplate: path.resolve('./src/templates/blog.js'), // check now
-      pageLength: 4, // This is optional and defaults to 10 if not used
+      pageLength: 5, // This is optional and defaults to 10 if not used
       pathPrefix: 'blog', // This is optional and defaults to an empty string if not used
       context: {}, // This is optional and defaults to an empty object if not used
     })
