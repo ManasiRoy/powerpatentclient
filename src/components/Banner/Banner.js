@@ -197,7 +197,7 @@ const Banner = () => {
             <div className="col-md-4 text-center mb-md-0 mb-4">
               <article className="border p-3 h-100">
                 <figure>
-                  <img src={common.foundersimage.link} />
+                  <img src={common.foundersimage.link} alt="founder" />
                 </figure>
                 <h3>{common.founderstext}</h3>
                 <p>{common.founderspara}</p>
@@ -206,7 +206,7 @@ const Banner = () => {
             <div className="col-md-4 text-center mb-md-0 mb-4">
               <article className="border p-3 h-100">
                 <figure>
-                  <img src={common.lawyersimage.link} />
+                  <img src={common.lawyersimage.link} alt="lawyers" />
                 </figure>
                 <h3>{common.lawyerstext}</h3>
                 <p>{common.lawyerspara}</p>
@@ -216,7 +216,7 @@ const Banner = () => {
             <div className="col-md-4 text-center mb-md-0 mb-4 ">
               <article className="border p-3 h-100">
                 <figure>
-                  <img src={common.companyimage.link} />
+                  <img src={common.companyimage.link} alt="company" />
                 </figure>
                 <h3>{common.companytext}</h3>
                 <p>{common.companypara}</p>
