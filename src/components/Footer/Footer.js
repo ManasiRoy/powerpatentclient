@@ -3,12 +3,12 @@ import { Link } from 'gatsby';
 import Navigation from '../FooterNavigation/Navigation';
 import { useMenuQuery } from '../../hooks/useMenuQuery';
 import Logo from "../../images/logo.png";
-import mailIcon from "../../images/mail-icon.svg";
+import mailIcon from "../../images/email.png";
 
 const Footer = () => {
     const { site, menu } = useMenuQuery();
     return (
-        <footer className="footer">
+        <footer className="footer text-white">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">

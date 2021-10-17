@@ -71,10 +71,11 @@ section{
 }
 .footer {
     padding: 50px 0 0;
-    border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
-    background: #fbfbfb I !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: #00327a !important;
     .logo{
-        max-width: 200px;
+        max-width: 140px;
+        margin-bottom: 25px;
     }
     ul {
         display: flex;
@@ -84,7 +85,7 @@ section{
         li {
             float: none; display: block;
             a{
-                text-transform: none; font-weight: 600; padding: 0;margin: 0; display: inline-block; padding-bottom: 15px; color: #000; font-size: 18px; text-decoration: none;
+                text-transform: none; font-weight: 600; padding: 0;margin: 0; display: inline-block; padding-bottom: 15px; color: $white; font-size: 18px; text-decoration: none;
             }
             ul{
                 padding-left: 15px;
@@ -121,10 +122,13 @@ section{
                 &:after{
                     content: "|";
                     position: absolute;
-                    top: 2px;
+                    top: 3px;
                     left: -10px;
-                    font-size: 10px;
-                    color: $white;
+                    background: $white;
+                    width: 1px;
+                    height: 10px;
+                    display: block;
+                    font-size: 0;
                 }
                 &:focus, &:hover{
                     opacity: 0.9;
@@ -143,11 +147,11 @@ section{
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    border-bottom: 1px solid #d3d3d3;
+    border-bottom: 1px solid #0a47a1;
     padding-bottom: 50px;
 }
-.email-outr img{width: 30px; margin-bottom: 0;}
-.email-outr a{color: #000; font-size: 16px; text-decoration: none; display: inline-block; padding-left: 15px;}
+.email-outr img{width: 25px; margin-bottom: 0;}
+.email-outr a{color: $white; font-size: 16px; text-decoration: none; display: inline-block; padding-left: 15px;}
 .card{
     a{
         text-decoration: none;

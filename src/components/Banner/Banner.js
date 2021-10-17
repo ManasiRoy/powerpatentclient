@@ -139,7 +139,7 @@ const Banner = () => {
       items: 1
     }
   };
-  console.log(data)
+  //console.log(data)
   return (
 
     <>
