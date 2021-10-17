@@ -41,6 +41,9 @@ p{
     font-size: 18px;
     line-height: 1.5;
 }
+.bg-primary{
+    background: $primary-heading-color;
+}
 .mainSpacing{
     padding-top: 80px;
     padding-bottom: 80px;
@@ -67,7 +70,7 @@ section{
     }
 }
 .footer {
-    padding: 50px 0;
+    padding: 50px 0 0;
     border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
     background: #fbfbfb I !important;
     .logo{
@@ -102,6 +105,35 @@ section{
             }
         }
     }
+    .mainsite{
+        color: $white;
+    }
+    .ulText{
+        display: flex;
+        li{
+            align-self: center;
+            padding: 10px;
+            a{
+                color: $white;
+                font-size: 14px;
+                padding-bottom: 0;
+                position: relative;
+                &:after{
+                    content: "|";
+                    position: absolute;
+                    top: 2px;
+                    left: -10px;
+                    font-size: 10px;
+                    color: $white;
+                }
+                &:focus, &:hover{
+                    opacity: 0.9;
+                    transition: all 0.3s ease;
+                }
+            }
+        }
+    }
+    .copyright{font-size: 12px;}
 }
 
 

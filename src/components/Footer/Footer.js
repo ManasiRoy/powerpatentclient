@@ -8,7 +8,7 @@ import mailIcon from "../../images/mail-icon.svg";
 const Footer = () => {
     const { site, menu } = useMenuQuery();
     return (
-        <section className="footer">
+        <footer className="footer">
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 text-center">
@@ -30,9 +30,28 @@ const Footer = () => {
                         <Navigation menu={menu.menuItems.nodes} />
                     </div>
                 </div>
+            </div>
+
+            <div class="text-center bg-primary text-white mt-5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 text-center py-2">
+                            <ul className="justify-content-center ulText">
+                                <li><div className="copyright">&copy; 2021 Copyright</div></li>
+                                <li>
+                                    <Link to="/terms">Terms of Use</Link>
+                                </li>
+                                <li>
+                                    <Link to="/privacy">Privacy Policy</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-        </section>
+
+        </footer>
     )
 }
 
