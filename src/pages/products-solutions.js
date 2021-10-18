@@ -11,7 +11,7 @@ const Product = ({ data }) => {
         <Layout>
             <SEO title="Product" />
             <section className="mainSection">
-                <figure>
+                <figure className="banner-main">
                     <img src={common.banner.link} alt="banner" />
                 </figure>
             </section>

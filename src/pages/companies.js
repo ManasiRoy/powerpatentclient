@@ -39,7 +39,7 @@ const Companies = () => {
             <Layout>
                 <SEO title="Law-Firm" />
                 <section className="mainSection">
-                    <figure>
+                    <figure className="banner-main">
                         <img src={common.bannerimage.link} alt="banner" />
                     </figure>
                 </section>

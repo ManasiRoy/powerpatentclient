@@ -38,7 +38,7 @@ const Lawfirms = () => {
             <Layout>
                 <SEO title="Law-Firm" />
                 <section className="mainSection">
-                    <figure>
+                    <figure className="banner-main">
                         <img src={common.banner.link} alt="banner" />
                     </figure>
                 </section>
