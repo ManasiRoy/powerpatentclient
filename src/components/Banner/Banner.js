@@ -179,7 +179,7 @@ const Banner = () => {
                     {imageData.map(image => {
                       return (
                         <figure className="px-3 text-center align-self-center" key={image.title}>
-                          <img src={image.link} alt="client" />
+                          <img src={image.uri} alt="client" />
                         </figure>
                       )
                     })}
@@ -236,32 +236,32 @@ const Banner = () => {
           </div>
           <div className="row">
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f1image.link} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f1image.uri} alt={common.f1image.altText} /></figure>
               <h4>{common.f1text}</h4>
               <p>{common.f1para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f2image.link} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f2image.uri} alt={common.f1image.altText} /></figure>
               <h4>{common.f2text}</h4>
               <p>{common.f2para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f3image.link} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f3image.uri} alt={common.f1image.altText} /></figure>
               <h4>{common.f3text}</h4>
               <p>{common.f3para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f4image.link} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f4image.uri} alt={common.f1image.altText} /></figure>
               <h4>{common.f4text}</h4>
               <p>{common.f4para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f5image.link} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f5image.uri} alt={common.f1image.altText} /></figure>
               <h4>{common.f5text}</h4>
               <p>{common.f5para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f6image.link} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f6image.uri} alt={common.f1image.altText} /></figure>
               <h4>{common.f6text}</h4>
               <p>{common.f6para}</p>
             </div>

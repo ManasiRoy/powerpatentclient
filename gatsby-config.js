@@ -3,7 +3,7 @@ module.exports = {
     title: `Powerpatient`,
     description: `Lawyer Website`,
     author: `Bao Tran`,
-    siteUrl: `https://powerpatent.gatsbyjs.io/`,
+    siteUrl: `https://powerpatent.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
