@@ -22,6 +22,8 @@ const getdata = graphql`
               uri
               title
               databaseId
+              mediaItemUrl
+              guid
             }
             lawyerstext
             lawyerspara
@@ -34,18 +36,24 @@ const getdata = graphql`
               title
               altText
               link
+              mediaItemUrl
+              guid
             }
             foundersimage {
               altText
               uri
               title
               link
+              mediaItemUrl
+              guid
             }
             companyimage {
               altText
               uri
               title
               link
+              mediaItemUrl
+              guid
             }
             f6para
             f6text
@@ -68,6 +76,8 @@ const getdata = graphql`
               sizes
               slug
               link
+              mediaItemUrl
+              guid
             }
             f5image {
               altText
@@ -76,6 +86,8 @@ const getdata = graphql`
               sizes
               slug
               link
+              mediaItemUrl
+              guid
             }
             f4image {
               altText
@@ -84,6 +96,8 @@ const getdata = graphql`
               sizes
               slug
               link
+              mediaItemUrl
+              guid
             }
             f3image {
               altText
@@ -92,6 +106,8 @@ const getdata = graphql`
               sizes
               slug
               link
+              mediaItemUrl
+              guid
             }
             f2image {
               altText
@@ -100,6 +116,8 @@ const getdata = graphql`
               sizes
               slug
               link
+              mediaItemUrl
+              guid
             }
             f1image {
               altText
@@ -108,6 +126,8 @@ const getdata = graphql`
               sizes
               slug
               link
+              mediaItemUrl
+              guid
             }
             
           }
@@ -179,7 +199,7 @@ const Banner = () => {
                     {imageData.map(image => {
                       return (
                         <figure className="px-3 text-center align-self-center" key={image.title}>
-                          <img src={image.uri} alt="client" />
+                          <img src={image.guid} alt="client" />
                         </figure>
                       )
                     })}
@@ -197,7 +217,7 @@ const Banner = () => {
             <div className="col-md-4 text-center mb-md-0 mb-4">
               <article className="border p-3 h-100">
                 <figure>
-                  <img src={common.foundersimage.link} alt="founder" />
+                  <img src={common.foundersimage.guid} alt="founder" />
                 </figure>
                 <h3>{common.founderstext}</h3>
                 <p>{common.founderspara}</p>
@@ -206,7 +226,7 @@ const Banner = () => {
             <div className="col-md-4 text-center mb-md-0 mb-4">
               <article className="border p-3 h-100">
                 <figure>
-                  <img src={common.lawyersimage.link} alt="lawyers" />
+                  <img src={common.lawyersimage.guid} alt="lawyers" />
                 </figure>
                 <h3>{common.lawyerstext}</h3>
                 <p>{common.lawyerspara}</p>
@@ -216,7 +236,7 @@ const Banner = () => {
             <div className="col-md-4 text-center mb-md-0 mb-4 ">
               <article className="border p-3 h-100">
                 <figure>
-                  <img src={common.companyimage.link} alt="company" />
+                  <img src={common.companyimage.guid} alt="company" />
                 </figure>
                 <h3>{common.companytext}</h3>
                 <p>{common.companypara}</p>
@@ -236,32 +256,32 @@ const Banner = () => {
           </div>
           <div className="row">
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f1image.uri} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f1image.guid} alt={common.f1image.altText} /></figure>
               <h4>{common.f1text}</h4>
               <p>{common.f1para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f2image.uri} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f2image.guid} alt={common.f1image.altText} /></figure>
               <h4>{common.f2text}</h4>
               <p>{common.f2para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f3image.uri} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f3image.guid} alt={common.f1image.altText} /></figure>
               <h4>{common.f3text}</h4>
               <p>{common.f3para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f4image.uri} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f4image.guid} alt={common.f1image.altText} /></figure>
               <h4>{common.f4text}</h4>
               <p>{common.f4para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f5image.uri} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f5image.guid} alt={common.f1image.altText} /></figure>
               <h4>{common.f5text}</h4>
               <p>{common.f5para}</p>
             </div>
             <div className="col-md-4 text-center mb-4">
-              <figure><img src={common.f6image.uri} alt={common.f1image.altText} /></figure>
+              <figure><img src={common.f6image.guid} alt={common.f1image.altText} /></figure>
               <h4>{common.f6text}</h4>
               <p>{common.f6para}</p>
             </div>

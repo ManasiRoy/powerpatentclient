@@ -1,9 +1,11 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `Powerpatient`,
     description: `Lawyer Website`,
     author: `Bao Tran`,
-    siteUrl: `https://powerpatent.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://www.powerpatent.com/graphql`,
+        url: process.env.WORDPRESS_URL,
         protocol: `http`,
         useACF: true,
         verboseOutput: true,
@@ -54,6 +56,7 @@ module.exports = {
         ],
       },
     },
+
     {
       resolve: `gatsby-plugin-styled-components`,
     },
@@ -63,9 +66,9 @@ module.exports = {
         typeName: "WPGraphQL",
         fieldName: "wpgraphql",
         // GraphQL endpoint, relative to your WordPress home URL.
-        url: "https://www.powerpatent.com/graphql",
+        //url: "https://wp.powerpatent.com/graphql",
         // GraphQL endpoint using env variable
-        // url: "${process.env.WORDPRESS_URL}/graphql",
+        url: process.env.WORDPRESS_URL,
       },
     },
     `gatsby-plugin-sass`,
