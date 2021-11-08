@@ -3,7 +3,7 @@ require('dotenv').config({
 })
 module.exports = {
   siteMetadata: {
-    title: `PowerPatent`,
+    title: `Powerpatient`,
     description: `Lawyer Website`,
     author: `Bao Tran`,
   },
