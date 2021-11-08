@@ -117,6 +117,7 @@ export const query = graphql`
     allWpPost {
       nodes {
         excerpt
+        content
         id
         uri
         title
