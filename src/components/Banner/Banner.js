@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -16,15 +16,6 @@ const getdata = graphql`
             video
             para1
             trustedtext
-            trustedimages {
-              altText
-              link
-              uri
-              title
-              databaseId
-              mediaItemUrl
-              guid
-            }
             lawyerstext
             lawyerspara
             founderstext
@@ -129,7 +120,15 @@ const getdata = graphql`
               mediaItemUrl
               guid
             }
-            
+            trustedclient {
+              ceoText
+              ceoDesignation
+              ceoDescription
+              ceoImage {
+                guid
+                title
+              }
+            }
           }
         }
       }
@@ -139,20 +138,19 @@ const getdata = graphql`
 const Banner = () => {
   const data = useStaticQuery(getdata);
   const common = data.wpgraphql.page.homeFields;
-  const imageData = common.trustedimages;
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5
+      items: 3
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5
+      items: 3
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 3
+      items: 2
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -160,6 +158,8 @@ const Banner = () => {
     }
   };
   //console.log(data)
+
+
   return (
 
     <>
@@ -196,11 +196,17 @@ const Banner = () => {
               <div className="justify-content-center align-items-center row">
                 <div className="row">
                   <Carousel responsive={responsive}>
-                    {imageData.map(image => {
+                    {common.trustedclient.map(data => {
                       return (
-                        <figure className="px-3 text-center align-self-center" key={image.title}>
-                          <img src={image.guid} alt="client" />
-                        </figure>
+                        <div className="client-outr">
+                          <figure className="px-3 text-center align-self-center client-pic" key={data.ceoImage.title}>
+                            <img src={data.ceoImage.guid} alt="client" />
+                          </figure>
+                          <h3>{data.ceoText}</h3>
+                          <h5>{data.ceoDesignation}</h5>
+                          <p>{data.ceoDescription}</p>
+
+                        </div>
                       )
                     })}
                   </Carousel>
@@ -289,29 +295,6 @@ const Banner = () => {
         </div>
       </section>
 
-
-
-      {/* <section className="mainSpacing">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 mb-5 text-center">
-              <h2>{common.forcompaniestext}</h2>
-              <h3>{common.forcompaniessubheading}</h3>
-            </div>
-            <div className="row">
-              <div className="col-md-6 align-self-center mb-4">
-                <div className="ratio ratio-16x9">
-                  <video src={common.forcompaniesvideo} controls allowFullScreen webkitallowfullscreen="true" className="embed-responsive-item"
-                    mozallowfullscreen="true" />
-                </div>
-              </div>
-              <div className="col-md-6 align-self-center mb-4">
-                <p>{common.forcompaniesparagraph}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section className="mainSpacing">
         <div className="container">
