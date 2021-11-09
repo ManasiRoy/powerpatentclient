@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 
 
-const Navigation = ({ menu }) => {
+const Navigation = ({ menu, url }) => {
 
     return (
         <ul className="navbar-nav ms-auto">

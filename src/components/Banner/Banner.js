@@ -198,7 +198,10 @@ const Banner = () => {
                   <Carousel responsive={responsive}>
                     {common.trustedclient.map(data => {
                       return (
-                        <div className="client-outr">
+                        <div className="
+                        
+                        
+                        ">
                           <figure className="px-3 text-center align-self-center client-pic" key={data.ceoImage.title}>
                             <img src={data.ceoImage.guid} alt="client" />
                           </figure>
