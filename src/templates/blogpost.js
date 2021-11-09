@@ -17,7 +17,7 @@ export default function Post({ data }) {
               <GatsbyImage
                 className="card-img-top mb-5"
                 image={
-                  allBlog.featuredImage.node.localFile.childImageSharp
+                  allBlog.featuredImage?.node.localFile.childImageSharp
                     .gatsbyImageData
                 }
                 alt="blog"
