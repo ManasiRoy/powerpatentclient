@@ -27,29 +27,14 @@ const BlogPage = (props) => {
       <section className="mainSpacing blogOutrFeatured">
         <div className="container">
           <div className="row mb-5">
-            {/* <div className="col-md-4">
-              <h3>Explore by topic</h3>
-              <ul className="list-group list-group-flash">
-                {
-                  group.map((catG, catGindex) => {
-                    return (
-                      <li className="list-group-item" key={catGindex}>
-                        <Link to={catG.slug}>{catG.categories.nodes.map(n => n.name)}</Link>
-                      </li>
-                    )
-                  })
-                }
-              </ul>
-            </div> */}
             <div className="col-md-6">
-              {/* <div>{last ? */}
               <div>
                 <h2>Featured</h2>
                 <div className="card">
                   <GatsbyImage
                     className="card-img-top"
                     image={
-                      group[0].featuredImage.node.localFile.childImageSharp
+                      group[0].featuredImage?.node.localFile.childImageSharp
                         .gatsbyImageData
                     }
                     alt="blog"
@@ -60,7 +45,7 @@ const BlogPage = (props) => {
                         {group[0].title}
                       </Link>
                     </h4>
-                    <div className="card-text" dangerouslySetInnerHTML={{ __html: group[0].excerpt }} />
+                    <div className="card-text" dangerouslySetInnerHTML={{ __html: group[0].content }} />
                   </div>
                 </div>
               </div>
@@ -76,7 +61,7 @@ const BlogPage = (props) => {
                       <div className="col-md-4">
                         <GatsbyImage
                           image={
-                            node.featuredImage.node.localFile.childImageSharp
+                            node.featuredImage?.node.localFile.childImageSharp
                               .gatsbyImageData
                           }
                           alt="blog"
@@ -117,6 +102,7 @@ export const query = graphql`
     allWpPost {
       nodes {
         excerpt
+        content
         id
         uri
         title
