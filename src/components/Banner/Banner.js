@@ -1,8 +1,9 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import { Link } from 'gatsby';
 
 const getdata = graphql`
     {
@@ -128,6 +129,11 @@ const getdata = graphql`
                 guid
                 title
               }
+              clientLogo {
+                id
+                title
+                sourceUrl
+              }
             }
           }
         }
@@ -198,17 +204,16 @@ const Banner = () => {
                   <Carousel responsive={responsive}>
                     {common.trustedclient.map(data => {
                       return (
-                        <div className="
-                        
-                        
-                        ">
-                          <figure className="px-3 text-center align-self-center client-pic" key={data.ceoImage.title}>
+                        <div className="client-outr text-center">
+                          <figure className="px-3 text-center logo-area" key={data.clientLogo.title}>
+                            <img src={data.clientLogo.sourceUrl} alt="client" />
+                          </figure>
+                          <figure className="px-3 text-center  client-pic mx-auto" key={data.ceoImage.title}>
                             <img src={data.ceoImage.guid} alt="client" />
                           </figure>
                           <h3>{data.ceoText}</h3>
                           <h5>{data.ceoDesignation}</h5>
                           <p>{data.ceoDescription}</p>
-
                         </div>
                       )
                     })}
@@ -310,7 +315,7 @@ const Banner = () => {
                 </article>
                 <div className="d-flex flex-wrap justify-content-center">
                   <Button variant="primary" className="m-2">Request a Demo</Button>
-                  <Button variant="primary" className="m-2">Take a video tour</Button>
+                  <Button variant="primary" className="m-2 videobtn"><Link to="/videos">Take a video tour</Link></Button>
                 </div>
               </div>
             </div>

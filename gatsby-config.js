@@ -44,16 +44,22 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         url: process.env.WORDPRESS_URL,
-        protocol: `http`,
-        useACF: true,
-        verboseOutput: true,
-        includedRoutes: [
-          '**/*/*/products',
-          '**/*/*/partners',
-          '**/*/*/resources',
-          '**/*/*/about',
-          '**/*/*/blog',
-        ],
+        // protocol: `http`,
+        // useACF: true,
+        // verboseOutput: true,
+        production: {
+          allow404Images: true
+        },
+        html: {
+          createStaticFiles: false,
+        },
+        // includedRoutes: [
+        //   '**/*/*/products',
+        //   '**/*/*/partners',
+        //   '**/*/*/resources',
+        //   '**/*/*/about',
+        //   '**/*/*/blog',
+        // ],
       },
     },
 

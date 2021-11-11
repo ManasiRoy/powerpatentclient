@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div class="text-center bg-primary text-white mt-5">
+            <div className="text-center bg-primary text-white mt-5">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center py-2">

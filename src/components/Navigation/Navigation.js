@@ -27,8 +27,6 @@ const Navigation = ({ menu, url }) => {
                                 }
                             </Link>
                         </li>
-
-
                     </>
                 ) : null
             )

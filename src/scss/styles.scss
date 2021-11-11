@@ -7,62 +7,73 @@
 body {
     font-size: 16px;
 }
-h1{
+h1 {
     font-size: 50px;
 }
-h2{
-    font-size:40px;
+h2 {
+    font-size: 40px;
 }
-h3{
+h3 {
     font-size: 30px;
 }
-h4{
+h4 {
     font-size: 25px;
 }
-h5{
+h5 {
     font-size: 20px;
 }
-img{
+img {
     max-width: 100%;
 }
-h1,h2,h3,h4,h5,h6, a{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
     color: $primary-heading-color;
     line-height: 1.2;
     margin-bottom: 15px;
     font-weight: 600;
 }
-a{
+a {
     margin-bottom: auto;
 }
-button.btn.btn-primary{
+.btn.btn-primary {
     background: $primary-heading-color;
+    transition: all 0.3s ease;
+    &:hover{
+        background: $yellow;
+        border-color: $yellow;
+    }
 }
-p{
+p {
     font-size: 18px;
     line-height: 1.5;
 }
-.bg-primary{
+.bg-primary {
     background: $primary-heading-color;
 }
-.mainSpacing{
+.mainSpacing {
     padding-top: 80px;
     padding-bottom: 80px;
 }
-section{
-    &:nth-child(even){
+section {
+    &:nth-child(even) {
         background: $odd-color;
     }
 }
-.logo{
+.logo {
     max-width: 150px;
     display: inline-block;
 }
-.threesection{
-    figure{
+.threesection {
+    figure {
         width: 100px;
         height: 100px;
-        margin:0 auto 25px;
-        img{
+        margin: 0 auto 25px;
+        img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -73,31 +84,41 @@ section{
     padding: 50px 0 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     background: #00327a !important;
-    .logo{
+    .logo {
         max-width: 140px;
         margin-bottom: 25px;
     }
     ul {
         display: flex;
         justify-content: space-between;
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
         li {
-            float: none; display: block;
-            a{
-                text-transform: none; font-weight: 600; padding: 0;margin: 0; display: inline-block; padding-bottom: 15px; color: $white; font-size: 18px; text-decoration: none;
+            display: block;
+            a {
+                text-transform: none;
+                font-weight: 600;
+                padding: 0;
+                margin: 0;
+                display: inline-block;
+                padding-bottom: 15px;
+                color: $white;
+                font-size: 18px;
+                text-decoration: none;
             }
-            ul{
+            ul {
                 padding-left: 15px;
                 display: block;
-                li{
+                li {
                     margin-bottom: 5px;
                     position: relative;
-                    a{
-                        padding-bottom: 0; font-size: 16px; font-weight: 400;
+                    a {
+                        padding-bottom: 0;
+                        font-size: 16px;
+                        font-weight: 400;
                     }
-                    &:after{
-                        content: '\2022';
+                    &:after {
+                        content: "\2022";
                         position: absolute;
                         left: -15px;
                         top: 0;
@@ -106,20 +127,20 @@ section{
             }
         }
     }
-    .mainsite{
+    .mainsite {
         color: $white;
     }
-    .ulText{
+    .ulText {
         display: flex;
-        li{
+        li {
             align-self: center;
             padding: 10px;
-            a{
+            a {
                 color: $white;
                 font-size: 14px;
                 padding-bottom: 0;
                 position: relative;
-                &:after{
+                &:after {
                     content: "|";
                     position: absolute;
                     top: 3px;
@@ -130,19 +151,23 @@ section{
                     display: block;
                     font-size: 0;
                 }
-                &:focus, &:hover{
+                &:focus,
+                &:hover {
                     opacity: 0.9;
                     transition: all 0.3s ease;
                 }
             }
         }
     }
-    .copyright{font-size: 12px;}
+    .copyright {
+        font-size: 12px;
+    }
 }
 
-
-.footer .downarrow{display: none;}
-.email-outr{
+.footer .downarrow {
+    display: none;
+}
+.email-outr {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,12 +175,21 @@ section{
     border-bottom: 1px solid #0a47a1;
     padding-bottom: 50px;
 }
-.email-outr img{width: 25px; margin-bottom: 0;}
-.email-outr a{color: $white; font-size: 16px; text-decoration: none; display: inline-block; padding-left: 15px;}
-.card{
-    a{
+.email-outr img {
+    width: 25px;
+    margin-bottom: 0;
+}
+.email-outr a {
+    color: $white;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 15px;
+}
+.card {
+    a {
         text-decoration: none;
-        .screen-reader-text{
+        .screen-reader-text {
             font-weight: 400;
             font-size: 16px;
         }
@@ -170,68 +204,81 @@ section{
         }
     }
 }
-.navbar-nav{
-    li{
+.navbar-nav {
+    li {
         position: relative;
-        ul{
-            .dropdown-item{
+        ul {
+            .dropdown-item {
                 background: transparent;
             }
         }
 
-        &:last-child{
-            ul{
+        &:last-child {
+            ul {
                 left: auto;
                 right: 0;
             }
         }
-        
     }
 }
-.navbar-light .navbar-nav .nav-link.nav-active{
+.navbar-light .navbar-nav .nav-link.nav-active {
     color: $primary-heading-color;
 }
-.banner-main{
+.banner-main {
     width: 100%;
-    img{
+    img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
-.logoArea{
-    .react-multi-carousel-list{
-        .react-multi-carousel-track{
-            align-items: center;
-            figure{
-                margin-bottom: 0;
-            }
+.logoArea {
+    .react-multi-carousel-list {
+        .react-multi-carousel-item {
+            padding-left: 25px;
+            padding-right: 25px;
         }
         .react-multiple-carousel__arrow--right {
             right: 0;
+            section {
+                padding: 0;
+            }
         }
-        .react-multiple-carousel__arrow--left {
-            left: 0;
+    }
+}
+.client-outr {
+    padding: 0 15px;
+    .client-pic {
+        width: 120px;
+        height: 90px;
+        overflow: hidden;
+        margin-bottom: 25px;
+        img {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 100%;
         }
     }
 }
 .table {
-    thead{
+    thead {
         background: $primary-heading-color;
         color: $white;
         text-transform: uppercase;
     }
 }
-.innerpages{
-    h4{
+.innerpages {
+    h4 {
         min-height: 60px;
         font-size: 22px;
     }
 }
-.blogOutr{
-    .card{
-        .card-body{
-            h4{
+.blogOutr {
+    .card {
+        .card-body {
+            h4 {
                 font-size: 16px;
                 font-weight: 500;
                 margin-bottom: 0;
@@ -239,18 +286,18 @@ section{
         }
     }
 }
-.dropdown-item{
+.dropdown-item {
     padding: 0;
 }
-.navbar-nav{
+.navbar-nav {
     align-items: center;
 }
-.list-group-flash{
-    .list-group-item{
-        a{
+.list-group-flash {
+    .list-group-item {
+        a {
             text-decoration: none;
             color: $primary-text-color;
-            &:hover{
+            &:hover {
                 color: $primary-heading-color;
             }
         }
@@ -265,14 +312,24 @@ section{
     vertical-align: top;
     height: 200px;
 }
-.word-wrap{
-    .card-text{
+.word-wrap {
+    .card-text {
         word-wrap: break-word;
     }
 }
-.navbar-nav{
-    .dropdown-menu{
+.navbar-nav {
+    .dropdown-menu {
         padding: 0;
+    }
+}
+.logo-area{
+    min-height: 70px;
+}
+.videobtn{
+    a{
+        text-decoration: none;
+        color: $white;
+        font-weight: 400;
     }
 }
 @import "./variables/responsive.scss";

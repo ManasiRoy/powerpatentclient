@@ -34,7 +34,7 @@ const BlogPage = (props) => {
                   <GatsbyImage
                     className="card-img-top"
                     image={
-                      group[0].featuredImage?.node.localFile.childImageSharp
+                      group[0].featuredImage.node.localFile?.childImageSharp
                         .gatsbyImageData
                     }
                     alt="blog"
@@ -61,7 +61,7 @@ const BlogPage = (props) => {
                       <div className="col-md-4">
                         <GatsbyImage
                           image={
-                            node.featuredImage?.node.localFile.childImageSharp
+                            node.featuredImage.node.localFile?.childImageSharp
                               .gatsbyImageData
                           }
                           alt="blog"
