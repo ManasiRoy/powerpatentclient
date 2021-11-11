@@ -54,8 +54,8 @@ const CustomerStories = () => {
 
         <section className="mainSpacing">
           <div className="container">
-            <div className="row mb-5">
-              <div className="col-md-6 mb-4 mb-md-0">
+            <div className="row">
+              <div className="col-md-7 mb-4 mb-md-0 align-self-center">
                 <h2
                 >{common.caseHeading}</h2
                 >
@@ -65,9 +65,9 @@ const CustomerStories = () => {
                 <p>{common.caseDescription}</p>
                 <button className="btn btn-primary">Read the full case study</button>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-5">
                 <figure>
-                  <img src={common.caseBanner.guid} alt={common.caseBanner.title} />
+                  <img src={common.caseBanner.guid} alt={common.caseBanner.title} className="w-100" />
                 </figure>
               </div>
             </div>
