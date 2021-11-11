@@ -45,7 +45,7 @@ const BlogPage = (props) => {
                         {group[0].title}
                       </Link>
                     </h4>
-                    <div className="card-text" dangerouslySetInnerHTML={{ __html: group[0].content }} />
+                    <div className="card-text" dangerouslySetInnerHTML={{ __html: group[0].excerpt }} />
                   </div>
                 </div>
               </div>
