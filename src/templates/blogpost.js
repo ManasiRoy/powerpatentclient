@@ -17,7 +17,7 @@ export default function Post({ data }) {
               <GatsbyImage
                 className="card-img-top mb-5"
                 image={
-                  allBlog.featuredImage?.node.localFile?.childImageSharp
+                  allBlog.featuredImage?.node.localFile.childImageSharp
                     .gatsbyImageData
                 }
                 alt="blog"
@@ -28,7 +28,7 @@ export default function Post({ data }) {
                 </h4>
                 <small>{allBlog.date}</small>
               </article>
-              <div className="card-text" dangerouslySetInnerHTML={{ __html: allBlog.content }} />
+              <div className="card-text" dangerouslySetInnerHTML={{ __html: allBlog.excerpt }} />
             </div>
           </div>
         </div>
@@ -44,7 +44,6 @@ export const query = graphql`
       excerpt
       id
       uri
-      content
       title
       featuredImage {
         node {
