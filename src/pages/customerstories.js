@@ -85,7 +85,7 @@ const CustomerStories = () => {
                         <img src={cs.logo.guid} alt={cs.logo.title} />
                       </figure>
                       <p>{cs.description}</p>
-                      <button className="btn btn-primary">Read More</button>
+                      <a className="btn btn-primary" href={cs.readmore.url} target="_blank">Read More</a>
                     </div>
                   </div>
                 )
