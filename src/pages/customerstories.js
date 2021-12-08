@@ -63,7 +63,7 @@ const CustomerStories = () => {
                   <img src={common.caseLogo.guid} alt={common.caseLogo.title} />
                 </figure>
                 <p>{common.caseDescription}</p>
-                <button className="btn btn-primary">Read the full case study</button>
+                <a className="btn btn-primary" href={common.readmore.url} target={common.readmore.target}>Read the full case study</a>
               </div>
               <div className="col-md-5">
                 <figure>
